@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oh Chute Homestead — Small-Batch Natural Products</title>
+<meta name="description" content="Small batch, lovingly crafted, vegan natural products from Oh Chute Homestead.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#products">Skip to products</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label="Oh Chute Homestead home">
+      <span class="brand-mark" aria-hidden="true">🌿</span>
+      <span class="brand-name">Oh Chute Homestead</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav" aria-label="Toggle menu">☰</button>
+    <nav id="nav" class="nav" aria-label="Main">
+      <a href="#products">Shop</a>
+      <a href="#story">Our Story</a>
+      <a href="#why">Why Natural</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-btn" id="cartOpen" aria-label="Open cart">
+      <span aria-hidden="true">🛒</span> Cart <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Small batch · Lovingly crafted · Vegan</p>
+        <h1>Simple, honest care, made by hand.</h1>
+        <p class="lead">Natural skin care from Oh Chute Homestead, made in small batches with care and kept plant-based.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#products">Shop the collection</a>
+          <a class="btn btn-ghost" href="#story">Our story</a>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <picture>
+          <source srcset="images/hero.webp" type="image/webp">
+          <img src="images/hero.jpg" width="1200" height="1022" alt="Oh Chute Homestead sheep lip balm tube beside the Lavender &amp; Lemon moisturizing cream jar with a wood-look lid">
+        </picture>
+      </figure>
+    </div>
+  </section>
+
+  <section class="values" aria-label="Highlights">
+    <div class="container values-inner">
+      <div><span aria-hidden="true">🌱</span> Vegan</div>
+      <div><span aria-hidden="true">🫙</span> Small batch</div>
+      <div><span aria-hidden="true">🤲</span> Lovingly crafted</div>
+      <div><span aria-hidden="true">🌿</span> Natural care</div>
+    </div>
+  </section>
+
+  <section class="section" id="products" aria-labelledby="productsTitle">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">The collection</p>
+        <h2 id="productsTitle">Shop our products</h2>
+      </div>
+      <div class="grid" id="productGrid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="section story" id="story" aria-labelledby="storyTitle">
+    <div class="container narrow">
+      <p class="eyebrow">About us</p>
+      <h2 id="storyTitle">Our story</h2>
+      <p>Oh Chute Homestead is a small homestead-style brand with a simple idea: make everyday care products by hand, in small batches, and put real care into every jar and tube.</p>
+      <p>Every label is designed with love and every batch is made thoughtfully, so what reaches you feels personal. We're just getting started, and we're glad you're here.</p>
+    </div>
+  </section>
+
+  <section class="section why" id="why" aria-labelledby="whyTitle">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Our promise</p>
+        <h2 id="whyTitle">Why natural &amp; vegan?</h2>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="icon" aria-hidden="true">🌿</div><h3>Naturally minded</h3><p>We favor natural, plant-based approaches to everyday skin care.</p></article>
+        <article class="card"><div class="icon" aria-hidden="true">🐑</div><h3>Vegan, cruelty-free spirit</h3><p>Our products are vegan, with no animal-derived ingredients.</p></article>
+        <article class="card"><div class="icon" aria-hidden="true">🫙</div><h3>Made in small batches</h3><p>Smaller batches mean more attention to detail with every product.</p></article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="container footer-inner">
+    <div>
+      <h2 class="footer-brand">Oh Chute Homestead</h2>
+      <p>Small batch. Lovingly crafted. Vegan.</p>
+      <p class="contact">Contact: <a href="mailto:hello@example.com">hello@example.com</a><br>
+      Phone: (555) 555-0123</p>
+    </div>
+    <form class="newsletter" id="newsletterForm" novalidate>
+      <label for="email"><strong>Join our newsletter</strong><br><span>News, new products and batch drops.</span></label>
+      <div class="nl-row">
+        <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+        <button class="btn btn-primary" type="submit">Subscribe</button>
+      </div>
+      <p class="nl-msg" id="nlMsg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+  <p class="copyright">© <span id="year"></span> Oh Chute Homestead. All rights reserved.</p>
+</footer>
+
+<div class="overlay" id="overlay" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Shopping cart" aria-hidden="true" tabindex="-1">
+  <div class="drawer-head">
+    <h2>Your cart</h2>
+    <button class="icon-btn" id="cartClose" aria-label="Close cart">✕</button>
+  </div>
+  <ul class="cart-items" id="cartItems"></ul>
+  <div class="drawer-foot">
+    <div class="total"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+    <button class="btn btn-primary block" id="checkout">Checkout</button>
+    <p class="checkout-msg" id="checkoutMsg" role="status" aria-live="polite"></p>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
